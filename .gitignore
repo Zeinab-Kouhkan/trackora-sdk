@@ -73,3 +73,5 @@ scratch/
 # Prompts and private task instructions
 prompt.md
 *prompt*.md
+agent.md
+*agent*.md
