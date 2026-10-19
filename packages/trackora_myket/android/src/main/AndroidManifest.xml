@@ -1,0 +1,12 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.trackora.myket">
+
+    <uses-permission android:name="ir.mservices.market.INSTALL_REFERRER" />
+
+    <queries>
+        <package android:name="ir.mservices.market" />
+        <intent>
+            <action android:name="ir.mservices.market.InstallReferrerService.BIND" />
+        </intent>
+    </queries>
+</manifest>

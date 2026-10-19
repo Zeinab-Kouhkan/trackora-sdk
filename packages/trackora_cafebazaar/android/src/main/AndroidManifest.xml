@@ -1,0 +1,9 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.trackora.cafebazaar">
+    <queries>
+        <package android:name="com.farsitel.bazaar" />
+        <intent>
+            <action android:name="com.cafebazaar.referrer.BIND" />
+        </intent>
+    </queries>
+</manifest>

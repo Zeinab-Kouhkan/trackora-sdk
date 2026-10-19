@@ -1,0 +1,34 @@
+name: trackora_example
+description: "Demonstration application for Trackora cross-platform attribution SDK."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: '>=3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  trackora: ^0.1.0
+  trackora_google_play: ^0.1.0
+  trackora_cafebazaar: ^0.1.0
+  trackora_myket: ^0.1.0
+
+dependency_overrides:
+  trackora:
+    path: ../../packages/trackora
+  trackora_google_play:
+    path: ../../packages/trackora_google_play
+  trackora_cafebazaar:
+    path: ../../packages/trackora_cafebazaar
+  trackora_myket:
+    path: ../../packages/trackora_myket
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true

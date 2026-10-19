@@ -1,0 +1,43 @@
+name: Trackora CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  analyze_and_test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.44.0'
+          channel: 'stable'
+
+      - name: Verify Flutter version
+        run: flutter --version
+
+      - name: Activate Melos
+        run: dart pub global activate melos
+
+      - name: Bootstrap Melos
+        run: melos bootstrap
+
+      - name: Verify Formatting
+        run: melos run format
+
+      - name: Run Static Analysis
+        run: melos run analyze
+
+      - name: Run Unit Tests
+        run: melos run test

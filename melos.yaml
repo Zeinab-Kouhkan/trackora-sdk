@@ -1,0 +1,27 @@
+name: trackora_monorepo
+repository: https://github.com/trackora/trackora-sdk
+
+packages:
+  - packages/*
+  - examples/*
+
+command:
+  bootstrap:
+    usePubspecOverrides: true
+
+scripts:
+  analyze:
+    run: melos exec -- "flutter analyze ."
+    description: Run `flutter analyze` in all packages.
+
+  test:
+    run: melos exec --dir-exists="test" -- "flutter test"
+    description: Run `flutter test` in all packages with tests.
+
+  format:
+    run: melos exec -- "dart format --output=none --set-exit-if-changed ."
+    description: Check formatting across all packages.
+
+  format:fix:
+    run: melos exec -- "dart format ."
+    description: Fix formatting across all packages.

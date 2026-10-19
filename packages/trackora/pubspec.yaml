@@ -1,0 +1,19 @@
+name: trackora
+description: "Cross-platform attribution SDK for Flutter. Collect, normalize, and expose campaign and referrer attribution data."
+version: 0.1.0
+homepage: https://github.com/trackora/trackora-sdk
+repository: https://github.com/trackora/trackora-sdk/tree/main/packages/trackora
+issue_tracker: https://github.com/trackora/trackora-sdk/issues
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: '>=3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
